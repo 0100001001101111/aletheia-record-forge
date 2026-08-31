@@ -9,7 +9,20 @@ first confirmed institutional correction was in NASA/JPL's close-approach databa
 Every object in this repository is self-certifying: a short dependency-free script re-verifies
 the claim from the certificate file in seconds. No trust in us is required or requested.
 
-## ramsey-b4-b9 — a new lower bound witness: R(B4, B9) ≥ 23
+## CORRECTION (2026-08-31)
+
+The R(B4,B9) >= 23 witness published here on 2026-08-24 is a VALID certified
+coloring, but it is NOT a new lower bound. The Small Ramsey Numbers survey
+(DS1.18, Table IXa) already gives 27 <= R(B4,B9) <= 28 via the known
+strongly regular graph srg(26,10,3,4) construction (survey item 5.3.l),
+which we verified directly against ten public adjacency matrices. Our
+original novelty audit misread one survey table cell. The certificate and
+its checkers remain correct and reusable; the "new bound" claim is
+retracted. We are leaving the witness and this correction in place as a
+worked example of certified-but-dominated, because that is what honest
+bookkeeping looks like.
+
+## ramsey-b4-b9 — a certified witness for R(B4, B9) ≥ 23 (CORRECTED: not a new bound — see above)
 
 `B_i` is the *book* graph: one edge (the spine) plus `i` pages, each page a vertex joined to
 both spine ends. The Ramsey number `R(B4, B9)` is the smallest `n` such that every red/blue
